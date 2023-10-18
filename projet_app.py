@@ -25,7 +25,7 @@ dropdownStyle = {
     'width': '200px'
 }
 
-app = Dash(__name__, use_pages=True, assets_url_path='./assets', external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = Dash(__name__, use_pages=True, assets_url_path='./dash/assets', external_stylesheets=[dbc.themes.BOOTSTRAP])
 server=app.server
 app.layout = html.Div([
     html.Div([
