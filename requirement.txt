@@ -1,2 +1,3 @@
+Dash == 2.14
+pandas
 gunicorn
-dash==2.13.0
