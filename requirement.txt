@@ -1,3 +1,3 @@
 Dash == 2.14
 pandas
-gunicorn==19.7.1
+gunicorn
