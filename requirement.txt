@@ -1,4 +1,0 @@
-Dash == 2.14
-pandas
-gunicorn
-dash-bootstrap-components
