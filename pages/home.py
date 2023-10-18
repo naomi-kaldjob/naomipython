@@ -10,13 +10,13 @@ years = [18, 19, 20, 21]
 frames = []
 for year in years:
     frames.append(
-        pd.read_csv(f'../assets/data/valeursfoncieres-20{year}.txt', sep='|', decimal=',', nrows=10000, low_memory=False)
+        pd.read_csv(f'./data/valeursfoncieres-20{year}.txt', sep='|', decimal=',', nrows=10000, low_memory=False)
     )
 df = pd.concat(frames)
 dfC = df.copy()
 df.shape
 
-dfAddress = pd.read_csv('../assets/data/communes-departement-region.csv', sep=',')
+dfAddress = pd.read_csv('./data/communes-departement-region.csv', sep=',')
 dfAddress = dfAddress.drop_duplicates(subset=['code_departement'])
 
 dfRegions = pd.DataFrame(dfAddress.code_region.ffill().unique(), columns=['code_region'])
@@ -31,13 +31,13 @@ dfScales = {'region': dfRegions, 'departement': dfDepts}
 geojson = {}
 
 
-with open('../assets/data/metropole-version-simplifiee.geojson') as response:
+with open('./data/metropole-version-simplifiee.geojson') as response:
     geojson['metropole'] = json.load(response)
 
-with open('../assets/data/regions-version-simplifiee.geojson') as response:
+with open('./data/regions-version-simplifiee.geojson') as response:
     geojson['region'] = json.load(response)
 
-with open('../assets/data/departements-version-simplifiee.geojson') as response:
+with open('./data/departements-version-simplifiee.geojson') as response:
     geojson['departement'] = json.load(response)
 
 df['key'] = df['Date mutation'].astype('str') + df['Type de voie'].astype('str') + df['Voie'].astype('str') + df['Code postal'].astype('str')
