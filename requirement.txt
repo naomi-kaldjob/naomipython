@@ -36,6 +36,7 @@ fonttools==4.43.0
 fqdn==1.5.1
 geographiclib==2.0
 geopy==2.4.0
+gunicorn
 idna==3.4
 ipykernel==6.25.2
 ipython==8.16.1
