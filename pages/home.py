@@ -7,12 +7,13 @@ import json
 
 years = [18, 19, 20, 21]
 
-frames = []
-for year in years:
-    frames.append(
-        pd.read_csv(f'./data/valeursfoncieres-20{year}.txt', sep='|', decimal=',', nrows=10000, low_memory=False)
-    )
-df = pd.concat(frames)
+
+df_2018=pd.read_csv(f'./data/valeursfoncieres-2018.txt', sep='|', decimal=',', nrows=10000, low_memory=False)
+df_2019=pd.read_csv(f'./data/valeursfoncieres-2019.txt', sep='|', decimal=',', nrows=10000, low_memory=False)
+df_2020=pd.read_csv(f'./data/valeursfoncieres-2019.txt', sep='|', decimal=',', nrows=10000, low_memory=False)
+df_2021=pd.read_csv(f'./data/valeursfoncieres-2020.txt', sep='|', decimal=',', nrows=10000, low_memory=False)
+    
+df = pd.concat(df_2018,df_2019,df_2020,df_2021)
 dfC = df.copy()
 df.shape
 
