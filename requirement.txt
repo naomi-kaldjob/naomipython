@@ -4,3 +4,6 @@ pandas
 numpy
 plotly
 scikit_learn
+json
+requests
+dash_bootstrap_components
