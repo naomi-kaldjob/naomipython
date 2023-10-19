@@ -43,8 +43,7 @@ with open('./data/departements-version-simplifiee.geojson') as response:
 
 df['key'] = df['Date mutation'].astype('str') + df['Type de voie'].astype('str') + df['Voie'].astype('str') + df['Code postal'].astype('str')
 df = df.groupby('key').filter(lambda x : len(x) == 1)
-
-
+df = df[df['Valeur fonciere'].notna()]
 df = df[df['Valeur fonciere'] > 1]
 df = df[df['Type local'].notna()]
 
