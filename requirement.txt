@@ -6,4 +6,4 @@ plotly
 scikit_learn
 requests
 dash_bootstrap_components
-layouts_from_pages
+
