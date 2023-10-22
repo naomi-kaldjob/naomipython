@@ -6,3 +6,4 @@ plotly
 scikit_learn=1.2.2
 requests
 dash_bootstrap_components
+locale
