@@ -5,7 +5,7 @@ import dash
 from dash import Dash, html, dcc, callback, Output, Input
 import dash_bootstrap_components as dbc
 import json
-locale.setlocale( locale.LC_ALL, 'fr_FR.UTF-8')
+#locale.setlocale( locale.LC_ALL, 'fr_FR.UTF-8')
 
 df = pd.read_csv(f'./data/dashboard-data.csv', sep='|', low_memory=False)
 dfRegions = pd.read_csv('./data/regions.csv', sep=';')
