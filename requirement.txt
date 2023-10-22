@@ -6,5 +6,4 @@ plotly
 scikit_learn
 requests
 dash_bootstrap_components
-pickle
 locale
