@@ -3,6 +3,6 @@ dash==2.13.0
 pandas
 numpy
 plotly
-scikit-learn==1.0.2
+scikit-learn
 requests
 dash_bootstrap_components
